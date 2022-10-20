@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// 123
+/// Scene Delegate
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
