@@ -8,7 +8,7 @@
 import UIKit
 
 /// Ячейка рекомедаций
-class RecomendationTableViewCell: UITableViewCell {
+final class RecomendationTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

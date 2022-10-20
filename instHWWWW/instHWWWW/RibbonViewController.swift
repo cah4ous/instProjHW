@@ -8,15 +8,24 @@
 import UIKit
 
 /// Экран отвечает за ленту новостей
-class RibbonViewController: UIViewController {
+final class RibbonViewController: UIViewController {
     private enum Constants {
-        static let postTextKey = "PostTableViewCell"
-        static let storiesTextKey = "StoriesTableViewCell"
-        static let recomendationTextKey = "RecomendationTableViewCell"
+        static let postTextCellIdentifire = "PostTableViewCell"
+        static let storiesTextCellIdentifire = "StoriesTableViewCell"
+        static let recomendationTextCellIdentifire = "RecomendationTableViewCell"
     }
     
+    private enum TableCellTypes {
+         case stories
+         case post
+         case recomendation
+     }
+    
     // MARK: IBOutlet
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
+    
+    // MARK: - Private properties
+     private var tableCellTypes: [TableCellTypes] = [.stories, .post, .recomendation]
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -33,12 +42,12 @@ class RibbonViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UINib(nibName: Constants.postTextKey,
-                                 bundle: nil), forCellReuseIdentifier: Constants.postTextKey)
-        tableView.register(UINib(nibName: Constants.storiesTextKey,
-                                 bundle: nil), forCellReuseIdentifier: Constants.storiesTextKey)
-        tableView.register(UINib(nibName: Constants.recomendationTextKey,
-                                 bundle: nil), forCellReuseIdentifier: Constants.recomendationTextKey)
+        tableView.register(UINib(nibName: Constants.postTextCellIdentifire,
+                                 bundle: nil), forCellReuseIdentifier: Constants.postTextCellIdentifire)
+        tableView.register(UINib(nibName: Constants.storiesTextCellIdentifire,
+                                 bundle: nil), forCellReuseIdentifier: Constants.storiesTextCellIdentifire)
+        tableView.register(UINib(nibName: Constants.recomendationTextCellIdentifire,
+                                 bundle: nil), forCellReuseIdentifier: Constants.recomendationTextCellIdentifire)
         
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -46,24 +55,30 @@ class RibbonViewController: UIViewController {
 
 extension RibbonViewController: UITableViewDelegate, UITableViewDataSource {
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return 6
+         return tableCellTypes.count
      }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         switch indexPath.row {
-         case 0:
-             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.storiesTextKey, for: indexPath)
-             return cell
-         case 1:
-             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.postTextKey, for: indexPath)
-             return cell
-         case 2:
-             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.recomendationTextKey, for: indexPath)
-             return cell
-         default:
-             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.postTextKey, for: indexPath)
-             return cell
+         let screen = tableCellTypes[indexPath.row]
+         switch screen {
+         case .stories:
+             guard let storiesCell = tableView.dequeueReusableCell(
+                withIdentifier: Constants.storiesTextCellIdentifire, for: indexPath)
+                    as? StoriesTableViewCell else { return UITableViewCell() }
+             return storiesCell
+         case .post:
+             guard let postCell = tableView.dequeueReusableCell(
+                withIdentifier: Constants.postTextCellIdentifire, for: indexPath)
+                    as? PostTableViewCell else { return UITableViewCell() }
+             return postCell
+         case .recomendation:
+             guard let recomendationCell = tableView.dequeueReusableCell(
+                withIdentifier: Constants.recomendationTextCellIdentifire, for: indexPath)
+                    as? RecomendationTableViewCell else { return UITableViewCell() }
+             return recomendationCell
+             
          }
+         
      }
 
      func numberOfSections(in tableView: UITableView) -> Int {

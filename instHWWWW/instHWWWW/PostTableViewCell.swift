@@ -8,9 +8,9 @@
 import UIKit
 
 /// Ячейка постов
-class PostTableViewCell: UITableViewCell {
+final class PostTableViewCell: UITableViewCell {
     
-    @IBOutlet var avatarImage: UIImageView!
+    @IBOutlet private var avatarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

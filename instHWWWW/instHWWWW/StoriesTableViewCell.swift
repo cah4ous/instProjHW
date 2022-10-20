@@ -8,7 +8,7 @@
 import UIKit
 
 /// Ячейка сторисов
-class StoriesTableViewCell: UITableViewCell {
+final class StoriesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
