@@ -9,6 +9,7 @@ import UIKit
 
 /// Экран недавних действий
 final class RecentlyViewController: UIViewController {
+    // MARK: - Constants
     private enum Constants {
         enum Texts {
             static let forToday = "Сегодня"
@@ -45,7 +46,7 @@ final class RecentlyViewController: UIViewController {
     }
 
     // MARK: - IBOutlet
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet private var tableView: UITableView!
     
     // MARK: - Private Visual Components
     private let refresherControl = UIRefreshControl()
@@ -60,12 +61,11 @@ final class RecentlyViewController: UIViewController {
         initMethods()
     }
     
-    // MARK: Private Objc Methods
+    // MARK: - Private Methods
     @objc private func handleRefreshAction() {
          refresherControl.endRefreshing()
      }
     
-    // MARK: Private Methods
     private func createRecently() {
         recentlies = [
             Recently(
@@ -121,10 +121,9 @@ final class RecentlyViewController: UIViewController {
     }
 }
 
-/// UITableViewDelegate & UITableViewDataSource
+// MARK: - UITableViewDelegate & UITableViewDataSource
 extension RecentlyViewController: UITableViewDelegate, UITableViewDataSource {
 
-     // MARK: - UITableViewDataSource
      func numberOfSections(in tableView: UITableView) -> Int {
          return tableCellTypes.count
      }
@@ -158,18 +157,18 @@ extension RecentlyViewController: UITableViewDelegate, UITableViewDataSource {
          let type = tableCellTypes[indexPath.section]
          switch type {
          case .today:
-             let model = recentlies[indexPath.row]
+             let person = recentlies[indexPath.row]
              guard let todayCell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier.todayCell,
                                                                  for: indexPath) as? TodayTableViewCell else {
                  return UITableViewCell() }
-             todayCell.refresh(model)
+             todayCell.refresh(person)
              return todayCell
          case .week:
-             let model = recentlies[indexPath.row]
+             let person = recentlies[indexPath.row]
              guard let weekCell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifier.weekCell,
                                                                  for: indexPath) as? WeekTableViewCell else {
                  return UITableViewCell() }
-             weekCell.refresh(model)
+             weekCell.refresh(person)
              return weekCell
          }
      }

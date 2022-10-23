@@ -19,26 +19,17 @@ final class TodayTableViewCell: UITableViewCell {
     
     @IBOutlet private var likeLabel: UILabel!
     
-    // MARK: - Lifecycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     // MARK: - Public Methods
     
-    func refresh(_ model: Recently) {
-         avatarPersonImageView.image = UIImage(named: model.profileImageName)
+    func refresh(_ person: Recently) {
+         avatarPersonImageView.image = UIImage(named: person.profileImageName)
 
         likeLabel.attributedText = NSMutableAttributedString()
-            .bold("\(model.profileImageName) ")
-            .normal("\(model.commentText) ")
-            .grayTextColor(" \(model.timeText)")
-        postImageView.image = UIImage(named: model.imageName)
-        if model.isSub {
+            .bold("\(person.profileImageName) ")
+            .normal("\(person.commentText) ")
+            .grayTextColor(" \(person.timeText)")
+        postImageView.image = UIImage(named: person.imageName)
+        if person.isSub {
             subscribeButton.isHidden = false
             postImageView.isHidden = true
         } else {

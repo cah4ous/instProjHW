@@ -9,6 +9,7 @@ import UIKit
 
 /// Настройка ячейки "За эту неделю"
 final class WeekTableViewCell: UITableViewCell {
+    // MARK: - Constants
     private enum Constants {
         static let grayColor = "defaultGray"
     }
@@ -23,25 +24,20 @@ final class WeekTableViewCell: UITableViewCell {
     @IBOutlet private var infoTextLabel: UILabel!
     
     // MARK: - Lifecycle
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         settingsSubButton()
     }
     
     // MARK: - Public Methods
-    func refresh(_ model: Recently) {
-        avatarImageView.image = UIImage(named: model.profileImageName)
+    func refresh(_ person: Recently) {
+        avatarImageView.image = UIImage(named: person.profileImageName)
         infoTextLabel.attributedText = NSMutableAttributedString()
-            .bold("\(model.profileImageName) ")
-            .normal("\(model.commentText) ")
-            .grayTextColor(" \(model.timeText)")
-        postImageView.image = UIImage(named: model.imageName)
-        if model.isSub {
+            .bold("\(person.profileImageName) ")
+            .normal("\(person.commentText) ")
+            .grayTextColor(" \(person.timeText)")
+        postImageView.image = UIImage(named: person.imageName)
+        if person.isSub {
             subscribeButton.isHidden = false
             postImageView.isHidden = true
         } else {

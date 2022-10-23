@@ -5,18 +5,22 @@
 //  Created by Александр Троицкий on 22.10.2022.
 //
 
-import Foundation
 import UIKit
 
+// MARK: - Constants
+private enum Fonts {
+    static let AvenirNextTextBold = "AvenirNext-Bold"
+    static let AvenirNextTextRegular = "SF Pro Text-Regular"
+}
+
+/// Настройка строки
 extension NSMutableAttributedString {
     var fontSize: CGFloat { return 14 }
     var boldFont: UIFont { return UIFont(
-        name: "AvenirNext-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize)
-        
+        name: Fonts.AvenirNextTextBold, size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize)
     }
     var normalFont: UIFont { return UIFont(
-        name: "AvenirNext-Regular", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
-        
+        name: Fonts.AvenirNextTextRegular, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
     }
     
     func bold(_ value: String) -> NSMutableAttributedString {
@@ -46,7 +50,7 @@ extension NSMutableAttributedString {
              .foregroundColor: UIColor.gray,
          ]
 
-         append(NSAttributedString(string: value, attributes: attributes))
+        append(NSAttributedString(string: value, attributes: attributes))
         return self
     }
 }

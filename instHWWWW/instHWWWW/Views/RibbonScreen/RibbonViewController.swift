@@ -9,6 +9,7 @@ import UIKit
 
 /// Экран отвечает за ленту новостей
 final class RibbonViewController: UIViewController {
+    // MARK: - Constants
     private enum Constants {
         static let postTextCellIdentifire = "PostTableViewCell"
         static let storiesTextCellIdentifire = "StoriesTableViewCell"
