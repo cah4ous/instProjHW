@@ -9,6 +9,7 @@ import UIKit
 
 /// Экран недавних действий
 final class RecentlyViewController: UIViewController {
+    
     // MARK: - Constants
     private enum Constants {
         enum Texts {
