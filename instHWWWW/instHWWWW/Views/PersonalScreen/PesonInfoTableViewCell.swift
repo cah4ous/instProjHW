@@ -8,5 +8,5 @@
 import UIKit
 
 /// Ячейка основной информации
-class PesonInfoTableViewCell: UITableViewCell {
+final class PesonInfoTableViewCell: UITableViewCell {
 }

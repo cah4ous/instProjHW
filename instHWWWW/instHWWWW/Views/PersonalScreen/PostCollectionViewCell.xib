@@ -24,6 +24,9 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="163" height="151"/>
+            <connections>
+                <outlet property="postImageView" destination="yDR-8J-y0g" id="Nhi-Pu-qeI"/>
+            </connections>
             <point key="canvasLocation" x="213.768115942029" y="113.50446428571428"/>
         </collectionViewCell>
     </objects>

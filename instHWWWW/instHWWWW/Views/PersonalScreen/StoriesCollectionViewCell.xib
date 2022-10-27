@@ -38,7 +38,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="113" height="98"/>
             <connections>
-                <outlet property="newLabe" destination="L5V-f0-7db" id="Uwa-rS-tsV"/>
+                <outlet property="newLabel" destination="L5V-f0-7db" id="P1j-Yv-54x"/>
+                <outlet property="storiesImageView" destination="ms0-vE-zBa" id="Sr0-pc-89b"/>
             </connections>
             <point key="canvasLocation" x="-67.391304347826093" y="95.758928571428569"/>
         </collectionViewCell>

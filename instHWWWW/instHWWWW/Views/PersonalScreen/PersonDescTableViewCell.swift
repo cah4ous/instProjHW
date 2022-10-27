@@ -16,8 +16,8 @@ class PersonDescTableViewCell: UITableViewCell {
     }
     
     // MARK: - IBOutlet
-    @IBOutlet var downChevronButton: UIButton!
-    @IBOutlet var sendMessageButton: UIButton!
+    @IBOutlet private var downChevronButton: UIButton!
+    @IBOutlet private var sendMessageButton: UIButton!
     
     // MARK: - Lifecycle
     override func setSelected(_ selected: Bool, animated: Bool) {

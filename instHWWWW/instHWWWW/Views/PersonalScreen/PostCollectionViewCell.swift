@@ -8,5 +8,13 @@
 import UIKit
 
 /// Ячейка коллекции поста
-class PostCollectionViewCell: UICollectionViewCell {
+final class PostCollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - IBOutlet
+    @IBOutlet var postImageView: UIImageView!
+    
+    // MARK: - Public Properties
+    func refresh(_ post: Post) {
+         postImageView.image = UIImage(named: post.imageName ?? "")
+     }
 }

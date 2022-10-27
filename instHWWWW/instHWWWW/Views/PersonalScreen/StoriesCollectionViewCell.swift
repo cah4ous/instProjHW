@@ -8,13 +8,15 @@
 import UIKit
 
 /// Ячейка сторисов
-class StoriesCollectionViewCell: UICollectionViewCell {
-    
+final class StoriesCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlet
-    @IBOutlet var newLabe: UILabel!
-
-    // MARK: - Public Methods
-    func refresh() {
-        newLabe.text = "123"
-    }
+    @IBOutlet private var newLabel: UILabel!
+    
+    @IBOutlet private var storiesImageView: UIImageView!
+    
+    // MARK: - Public Properties
+    func refresh(_ stories: Stories) {
+         storiesImageView.image = UIImage(named: stories.imageName ?? "")
+         newLabel.text = stories.name ?? ""
+     }
 }

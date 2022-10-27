@@ -8,27 +8,42 @@
 import UIKit
 
 /// Ячейка постов тейблвью
-class PersonPostTableViewCell: UITableViewCell {
+final class PersonPostTableViewCell: UITableViewCell {
     
     // MARK: - Constants
     private enum Constants {
         static let cellIdentifier = "PostCollectionViewCell"
+        static let postImageName = "Photo"
     }
 
     // MARK: - IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
+    // MARK: - Private Properties
+    var postHistory: [Post] = []
+    
     // MARK: - Lifecycle
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        setupUI()
+        initMethods()
     }
 
     // MARK: - Private methods
+    private func initMethods() {
+        setupUI()
+        createPosts()
+    }
+    private func setPost(newImageName: String) {
+        var post = Post()
+        post.imageName = newImageName
+        
+        postHistory.append(post)
+    }
+    
+    private func createPosts() {
+        setPost(newImageName: Constants.postImageName)
+        setPost(newImageName: Constants.postImageName)
+    }
     private func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -41,14 +56,17 @@ class PersonPostTableViewCell: UITableViewCell {
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension PersonPostTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return postHistory.count
     }
+    
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let itemCell = collectionView.dequeueReusableCell(
             withReuseIdentifier: Constants.cellIdentifier,
             for: indexPath) as? PostCollectionViewCell {
-//            itemCell.refresh()
+            let post = postHistory[indexPath.row]
+            itemCell.refresh(post)
+            
             return itemCell
         }
         return UICollectionViewCell()

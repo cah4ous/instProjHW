@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71126F94290A59DF001A4FA4 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126F93290A59DF001A4FA4 /* Stories.swift */; };
+		71126F96290A5A57001A4FA4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126F95290A5A57001A4FA4 /* Post.swift */; };
 		713B8FFA290346F4004C0511 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B8FF9290346F4004C0511 /* NSMutableAttributedString.swift */; };
 		7170270429073A140098CBB7 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170270229073A140098CBB7 /* StoriesCollectionViewCell.swift */; };
 		7170270529073A140098CBB7 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7170270329073A140098CBB7 /* StoriesCollectionViewCell.xib */; };
@@ -43,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71126F93290A59DF001A4FA4 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		71126F95290A5A57001A4FA4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		713B8FF9290346F4004C0511 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		7170270229073A140098CBB7 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7170270329073A140098CBB7 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				71C073CC2902B24D009D9C78 /* Recently.swift */,
+				71126F93290A59DF001A4FA4 /* Stories.swift */,
+				71126F95290A5A57001A4FA4 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			files = (
 				71FB280A2901475B001E6D15 /* RecomendationTableViewCell.swift in Sources */,
 				71FB27E7290141D1001E6D15 /* AppDelegate.swift in Sources */,
+				71126F94290A59DF001A4FA4 /* Stories.swift in Sources */,
 				7170270429073A140098CBB7 /* StoriesCollectionViewCell.swift in Sources */,
 				71C073C82902B0EC009D9C78 /* WeekTableViewCell.swift in Sources */,
 				7172585E29061F7E00FC432C /* PersonStoriesTableViewCell.swift in Sources */,
@@ -318,6 +325,7 @@
 				71C073BB29028A8F009D9C78 /* RecentlyViewController.swift in Sources */,
 				717258392906143900FC432C /* PersonalViewController.swift in Sources */,
 				71C073CD2902B24D009D9C78 /* Recently.swift in Sources */,
+				71126F96290A5A57001A4FA4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
