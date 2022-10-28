@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71126F94290A59DF001A4FA4 /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126F93290A59DF001A4FA4 /* Stories.swift */; };
+		71126F96290A5A57001A4FA4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71126F95290A5A57001A4FA4 /* Post.swift */; };
 		713B8FFA290346F4004C0511 /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713B8FF9290346F4004C0511 /* NSMutableAttributedString.swift */; };
+		7170270429073A140098CBB7 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170270229073A140098CBB7 /* StoriesCollectionViewCell.swift */; };
+		7170270529073A140098CBB7 /* StoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7170270329073A140098CBB7 /* StoriesCollectionViewCell.xib */; };
+		717027082907556E0098CBB7 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717027062907556E0098CBB7 /* PostCollectionViewCell.swift */; };
+		717027092907556E0098CBB7 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717027072907556E0098CBB7 /* PostCollectionViewCell.xib */; };
+		7170270B290763620098CBB7 /* PesonInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170270A290763620098CBB7 /* PesonInfoTableViewCell.swift */; };
+		717258392906143900FC432C /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717258382906143900FC432C /* PersonalViewController.swift */; };
+		7172585329061F2C00FC432C /* PesonInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7172585129061F2C00FC432C /* PesonInfoTableViewCell.xib */; };
+		7172585829061F5C00FC432C /* PersonDescTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172585629061F5C00FC432C /* PersonDescTableViewCell.swift */; };
+		7172585929061F5C00FC432C /* PersonDescTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7172585729061F5C00FC432C /* PersonDescTableViewCell.xib */; };
+		7172585E29061F7E00FC432C /* PersonStoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172585C29061F7E00FC432C /* PersonStoriesTableViewCell.swift */; };
+		7172585F29061F7E00FC432C /* PersonStoriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7172585D29061F7E00FC432C /* PersonStoriesTableViewCell.xib */; };
+		7172586229061F9300FC432C /* PersonPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7172586029061F9300FC432C /* PersonPostTableViewCell.swift */; };
+		7172586329061F9300FC432C /* PersonPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7172586129061F9300FC432C /* PersonPostTableViewCell.xib */; };
 		71C073BB29028A8F009D9C78 /* RecentlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C073BA29028A8F009D9C78 /* RecentlyViewController.swift */; };
 		71C073C22902A66A009D9C78 /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C073C02902A66A009D9C78 /* TodayTableViewCell.swift */; };
 		71C073C32902A66A009D9C78 /* TodayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C073C12902A66A009D9C78 /* TodayTableViewCell.xib */; };
@@ -30,7 +45,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71126F93290A59DF001A4FA4 /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		71126F95290A5A57001A4FA4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		713B8FF9290346F4004C0511 /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		7170270229073A140098CBB7 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		7170270329073A140098CBB7 /* StoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		717027062907556E0098CBB7 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		717027072907556E0098CBB7 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		7170270A290763620098CBB7 /* PesonInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PesonInfoTableViewCell.swift; sourceTree = "<group>"; };
+		717258382906143900FC432C /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		7172585129061F2C00FC432C /* PesonInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PesonInfoTableViewCell.xib; sourceTree = "<group>"; };
+		7172585629061F5C00FC432C /* PersonDescTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDescTableViewCell.swift; sourceTree = "<group>"; };
+		7172585729061F5C00FC432C /* PersonDescTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonDescTableViewCell.xib; sourceTree = "<group>"; };
+		7172585C29061F7E00FC432C /* PersonStoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonStoriesTableViewCell.swift; sourceTree = "<group>"; };
+		7172585D29061F7E00FC432C /* PersonStoriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonStoriesTableViewCell.xib; sourceTree = "<group>"; };
+		7172586029061F9300FC432C /* PersonPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonPostTableViewCell.swift; sourceTree = "<group>"; };
+		7172586129061F9300FC432C /* PersonPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonPostTableViewCell.xib; sourceTree = "<group>"; };
 		71C073BA29028A8F009D9C78 /* RecentlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyViewController.swift; sourceTree = "<group>"; };
 		71C073C02902A66A009D9C78 /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
 		71C073C12902A66A009D9C78 /* TodayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayTableViewCell.xib; sourceTree = "<group>"; };
@@ -73,6 +103,26 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		717258372906140D00FC432C /* PersonalScreen */ = {
+			isa = PBXGroup;
+			children = (
+				717258382906143900FC432C /* PersonalViewController.swift */,
+				7172585129061F2C00FC432C /* PesonInfoTableViewCell.xib */,
+				7170270A290763620098CBB7 /* PesonInfoTableViewCell.swift */,
+				7172585629061F5C00FC432C /* PersonDescTableViewCell.swift */,
+				7172585729061F5C00FC432C /* PersonDescTableViewCell.xib */,
+				7170270229073A140098CBB7 /* StoriesCollectionViewCell.swift */,
+				7170270329073A140098CBB7 /* StoriesCollectionViewCell.xib */,
+				7172585C29061F7E00FC432C /* PersonStoriesTableViewCell.swift */,
+				7172585D29061F7E00FC432C /* PersonStoriesTableViewCell.xib */,
+				7172586029061F9300FC432C /* PersonPostTableViewCell.swift */,
+				7172586129061F9300FC432C /* PersonPostTableViewCell.xib */,
+				717027062907556E0098CBB7 /* PostCollectionViewCell.swift */,
+				717027072907556E0098CBB7 /* PostCollectionViewCell.xib */,
+			);
+			path = PersonalScreen;
+			sourceTree = "<group>";
+		};
 		71C073C42902B0A9009D9C78 /* RibbonScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +152,7 @@
 		71C073CA2902B1A9009D9C78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				717258372906140D00FC432C /* PersonalScreen */,
 				71C073C52902B0CD009D9C78 /* RecentlyScreen */,
 				71C073C42902B0A9009D9C78 /* RibbonScreen */,
 			);
@@ -112,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				71C073CC2902B24D009D9C78 /* Recently.swift */,
+				71126F93290A59DF001A4FA4 /* Stories.swift */,
+				71126F95290A5A57001A4FA4 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,12 +264,18 @@
 				71FB280F29014764001E6D15 /* StoriesTableViewCell.xib in Resources */,
 				71FB280C2901475B001E6D15 /* RecomendationTableViewCell.xib in Resources */,
 				71C073C92902B0EC009D9C78 /* WeekTableViewCell.xib in Resources */,
+				7172585929061F5C00FC432C /* PersonDescTableViewCell.xib in Resources */,
+				7172585329061F2C00FC432C /* PesonInfoTableViewCell.xib in Resources */,
 				71FB27F3290141D2001E6D15 /* LaunchScreen.storyboard in Resources */,
 				71C073C32902A66A009D9C78 /* TodayTableViewCell.xib in Resources */,
 				71FB28092901475B001E6D15 /* PostTableViewCell.xib in Resources */,
 				71FB27FC290144CD001E6D15 /* Colors.xcassets in Resources */,
 				71FB2800290144F7001E6D15 /* Assets.xcassets in Resources */,
+				7172585F29061F7E00FC432C /* PersonStoriesTableViewCell.xib in Resources */,
+				7172586329061F9300FC432C /* PersonPostTableViewCell.xib in Resources */,
+				7170270529073A140098CBB7 /* StoriesCollectionViewCell.xib in Resources */,
 				71FB28022901473E001E6D15 /* Main.storyboard in Resources */,
+				717027092907556E0098CBB7 /* PostCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,15 +308,24 @@
 			files = (
 				71FB280A2901475B001E6D15 /* RecomendationTableViewCell.swift in Sources */,
 				71FB27E7290141D1001E6D15 /* AppDelegate.swift in Sources */,
+				71126F94290A59DF001A4FA4 /* Stories.swift in Sources */,
+				7170270429073A140098CBB7 /* StoriesCollectionViewCell.swift in Sources */,
 				71C073C82902B0EC009D9C78 /* WeekTableViewCell.swift in Sources */,
+				7172585E29061F7E00FC432C /* PersonStoriesTableViewCell.swift in Sources */,
 				71FB280B2901475B001E6D15 /* PostTableViewCell.swift in Sources */,
 				71FB27E9290141D1001E6D15 /* SceneDelegate.swift in Sources */,
+				7170270B290763620098CBB7 /* PesonInfoTableViewCell.swift in Sources */,
+				717027082907556E0098CBB7 /* PostCollectionViewCell.swift in Sources */,
 				713B8FFA290346F4004C0511 /* NSMutableAttributedString.swift in Sources */,
+				7172586229061F9300FC432C /* PersonPostTableViewCell.swift in Sources */,
+				7172585829061F5C00FC432C /* PersonDescTableViewCell.swift in Sources */,
 				71C073C22902A66A009D9C78 /* TodayTableViewCell.swift in Sources */,
 				71FB28082901475B001E6D15 /* RibbonViewController.swift in Sources */,
 				71FB281029014764001E6D15 /* StoriesTableViewCell.swift in Sources */,
 				71C073BB29028A8F009D9C78 /* RecentlyViewController.swift in Sources */,
+				717258392906143900FC432C /* PersonalViewController.swift in Sources */,
 				71C073CD2902B24D009D9C78 /* Recently.swift in Sources */,
+				71126F96290A5A57001A4FA4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
